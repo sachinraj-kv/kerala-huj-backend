@@ -3,8 +3,9 @@ const app = require('./app/app');
 const mongoDB_Connect = require('./connect/mongoConnect');
 
 mongoDB_Connect()
-app.listen("3000",()=>{
-    console.log("server running on 3000");
+app.listen(process.env.PORT,()=>{
+    console.log(`server running on${process.env.PORT}`);
     
 })
+
 
