@@ -20,7 +20,8 @@ exports.authorization = async (req ,res ,next)=>{
         req.name = decode.name
 
         
-        
+         next()
     })
-    next()
+   
+
 }
