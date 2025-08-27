@@ -13,8 +13,10 @@ app.use(cookieparser())
 
 app.use(cors({
   origin: "https://kerala-huj-frontend.onrender.com", 
-  credentials: true, 
+  methods: ["GET", "POST", "PUT", "DELETE", "OPTIONS"],
+  credentials: true,
 }));
+
 
 app.use('/data',userrouter)
 app.use('/report',reportrouter)
@@ -22,3 +24,4 @@ app.use('/user',authrouter)
 
 
 module.exports = app;
+
