@@ -11,13 +11,14 @@ app.use(express.urlencoded({ extended: true }));
 
 app.use(cookieparser())
 
-app.use(cors({ 
-    origin : true,
-    credentials : true
-}))
+app.use(cors({
+  origin: "https://kerala-huj-frontend.onrender.com", 
+  credentials: true, 
+}));
 
 app.use('/data',userrouter)
 app.use('/report',reportrouter)
 app.use('/user',authrouter)
+
 
 module.exports = app;
