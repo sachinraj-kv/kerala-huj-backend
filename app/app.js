@@ -17,6 +17,7 @@ app.use(cors({
   credentials: true,
 }));
 
+app.options("*", cors());
 
 app.use('/data',userrouter)
 app.use('/report',reportrouter)
@@ -24,4 +25,5 @@ app.use('/user',authrouter)
 
 
 module.exports = app;
+
 
