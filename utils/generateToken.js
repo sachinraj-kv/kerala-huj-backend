@@ -19,12 +19,12 @@ exports.generateToken = async (req ,res)=>{
         })
     }
 
-    res.cookie("token" ,jwtToken ),{
-        httpOnly: true,       
-        secure: true,        
-        sameSite: "none",     
-        maxAge: 60 * 60 * 1000
-    }
+     res.cookie("token", jwtToken, { 
+    httpOnly: true,       
+    secure: true,        
+    sameSite: "none",     
+    maxAge: 60 * 60 * 1000
+});
 
     res.status(200).json({
         success : true,
@@ -35,4 +35,5 @@ exports.generateToken = async (req ,res)=>{
             name : req.user.id,
         }
     })
+
 }
