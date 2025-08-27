@@ -8,10 +8,11 @@ const router = express.Router();
 
 router.route('/submit').post(authorization,submitReport)
 router.get('/view', viewReport);
-router.put('/view', Update);
+router.put('/update', Update);
 router.route('/search').post(reportsearch)
 router.route('/details/:id').get(report)
 
 
 module.exports = router;
+
 
